@@ -168,6 +168,7 @@ export const tt: InternalTokenTypes = {
   templateTail: createToken("...`", { startsExpr }),
   templateNonTail: createToken("...${", { beforeExpr, startsExpr }),
   // end: isTemplate
+  atat: createToken("@@"),
   at: createToken("@"),
   hash: createToken("#", { startsExpr }),
 

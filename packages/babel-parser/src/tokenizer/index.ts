@@ -703,6 +703,10 @@ export default abstract class Tokenizer extends CommentsParser {
     ) {
       this.finishOp(tt.doubleAt, 2);
     }
+    // `@@` but custom
+    else if (next === charCodes.atSign) {
+      this.finishOp(tt.atat, 2);
+    }
     // '@'
     else {
       this.finishOp(tt.at, 1);
